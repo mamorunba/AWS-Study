@@ -4,4 +4,4 @@
 - AWS操作のためのグループ・ユーザー・ロールの作成が可能
 - グループ、ユーザーごとに、実⾏出来る操作を規定できる（IAMポリシー）
 
-
+![image](https://user-images.githubusercontent.com/2520577/41503547-276c2d44-7212-11e8-80c8-970ae7e6e229.png)
