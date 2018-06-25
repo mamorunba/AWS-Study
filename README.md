@@ -104,6 +104,7 @@ https://docs.aws.amazon.com/ja_jp/cli/latest/userguide/cli-roles.html
 - ACMで管理するSSL/TLS証明書については料金が発生しない。
 
 - 証明書の種類は「ドメイン認証」。
+
 ![image](https://user-images.githubusercontent.com/2520577/41504864-57761828-7236-11e8-84a1-16a36804a97e.png)
 
 
@@ -155,3 +156,9 @@ https://docs.aws.amazon.com/ja_jp/AmazonVPC/latest/UserGuide/VPC_Networking.html
 - 本番環境、検証環境の単位。（VPCで分割していない場合）
 - DMZ、APサーバ、DBサーバ等の単位。セキュリティ観点による分離
 - AZ単位。AWSの制約のため
+
+## VPC作成方法
+https://docs.aws.amazon.com/ja_jp/AmazonVPC/latest/UserGuide/getting-started-ipv4.html#getting-started-create-vpc
+
+## サブネット作成方法
+https://docs.aws.amazon.com/ja_jp/AmazonVPC/latest/UserGuide/working-with-vpcs.html#AddaSubnet
