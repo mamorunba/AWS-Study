@@ -162,3 +162,50 @@ https://docs.aws.amazon.com/ja_jp/AmazonVPC/latest/UserGuide/getting-started-ipv
 
 ## サブネット作成方法
 https://docs.aws.amazon.com/ja_jp/AmazonVPC/latest/UserGuide/working-with-vpcs.html#AddaSubnet
+
+
+
+# 実際に環境を作成してみる
+## AWSの環境構築サービス
+![image](https://user-images.githubusercontent.com/2520577/42405597-244d6e30-81d4-11e8-8882-3c1cb33590b3.png)
+
+![image](https://user-images.githubusercontent.com/2520577/42405609-5404521a-81d4-11e8-99e2-af2d9b6af815.png)
+
+## Elastic Beanstalkを使用して環境構築
+- 以下のような構成を簡単に作成します。
+
+![image](https://user-images.githubusercontent.com/2520577/42406204-c613a87a-81dd-11e8-9101-e4560d44f6be.png)
+
+- 事前にEC2キーペアを作成しておきます（後程使用）
+https://docs.aws.amazon.com/ja_jp/AWSEC2/latest/UserGuide/ec2-key-pairs.html#having-ec2-create-your-key-pair
+
+- 管理コンソールから「今すぐ始める」ボタンを押下
+![image](https://user-images.githubusercontent.com/2520577/42405732-0411a418-81d6-11e8-8d6b-d9b825ce7f5b.png)
+
+- アプリケーション名を入力し、プラットフォームを選択します。（今回はTomcat選択）
+![image](https://user-images.githubusercontent.com/2520577/42405768-bdf7bfac-81d6-11e8-9a3d-7c3b742b7cc7.png)
+
+- アプリケーションコードを「サンプルアプリケーション」を選択し、「さらにオプションを設定」ボタンを押下（アプリケーションコードに独自作成のWARファイルの指定も可能。今回は簡略化のためAWSに用意されているサンプルアプリを使用）
+![image](https://user-images.githubusercontent.com/2520577/42405797-597f2fb4-81d7-11e8-89fe-b1576a6c33a1.png)
+
+- 容量の変更を押下
+![image](https://user-images.githubusercontent.com/2520577/42405846-07abacb6-81d8-11e8-803f-bdcecf6c9f48.png)
+
+- 環境タイプに「負荷分散」を選択する（AutoScaling使用設定がされる。今回はサンプルのため、インスタンス最大値は１にしてある。）
+![image](https://user-images.githubusercontent.com/2520577/42405869-5786d9cc-81d8-11e8-8b63-9192b063b3c8.png)
+
+- 保存ボタン押下
+![image](https://user-images.githubusercontent.com/2520577/42405882-9abb9368-81d8-11e8-8281-79c1cb017ef9.png)
+
+- セキュリティの変更を押下
+![image](https://user-images.githubusercontent.com/2520577/42405915-eaa97fac-81d8-11e8-8463-c75a18859fa0.png)
+
+- EC2キーペアに事前に作成しておいたキーペアを選択し、保存ボタンを押下
+![image](https://user-images.githubusercontent.com/2520577/42406052-6b6adca6-81db-11e8-809c-99dfda764256.png)
+
+- アプリの作成ボタンを押下
+![image](https://user-images.githubusercontent.com/2520577/42406073-b491383a-81db-11e8-967e-6ae02bd93160.png)
+
+
+- 以下が表示されれば完了
+![image](https://user-images.githubusercontent.com/2520577/42406131-b9b3e0c8-81dc-11e8-890e-b2bd1a71dea3.png)
